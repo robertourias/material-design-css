@@ -1,0 +1,119 @@
+.slider {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+
+    .slick-slide {
+        text-align: center;
+
+        img {
+            margin: 0 auto;   
+        }        
+    }
+}
+    
+.grid {    
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 40px;
+
+    .col {
+        position: relative;
+        lost-column-gutter: 0px;
+        lost-column: 1/3;
+        overflow: hidden;
+        text-decoration: none;
+        color: #FFF;
+
+        &:before {
+            transition: all 0.4s ease;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.5;
+            z-index: 6;
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            &:before {
+                opacity: 0;    
+            }
+        }
+
+        .capa {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 6;
+            height: 100%;
+            background-position: center center !important;
+        }
+
+        .icone {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 6;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            dl {
+                text-align: center;
+                font-size: 22px;
+
+                dt {
+                    margin: 0 0 6px;    
+                }                
+            } 
+        }
+
+        .call-action {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: #FFF;
+            font-size: 22px;
+            z-index: 8;
+
+            i {
+                margin-right: 10px;    
+            }
+        }
+    }
+}
+
+.btns {
+    .link {
+        background: transparent;
+        border: 0;
+        float: right;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #afb1b4;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;    
+        }
+
+        &:hover {
+            color: #5757ad;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+$black: #000;
+$white: #fff;
+$margin: 30px;
+$fontFamily: 'Roboto', sans-serif;
+$fontSize: 14px;
+$colorPrimary: #4a4a4a;
+$gray: #666;
+$colorSecondary: #203090;
+$colorAlternative: #cba639;
+$colorAlternativeDark: #6f581e;
+
+%cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@custom-media --mobile (width <= 767px);
+@custom-media --desktop (width > 767px);
+
+@mixin --retina {
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+        @content;
+    }
+}
+
+
+a {
+    color: $colorSecondary;
+    font-family: $fontFamily;
+
+    &:hover, &:active {
+        color: $colorSecondary;
+    }
+
+    &:focus {
+      outline: none;  
+    }
+}
+
+strong {
+    font-weight: 700 !important;
+}
+
+section {
+    @extend %cf;
+}
+
+body {
+  
+}
+body {
+    color: $colorPrimary;
+    font-family: $fontFamily;
+    font-size: $fontSize;    
+    overflow-x: hidden;    
+    background-color: #f6f6f8;
+
+    h1, h2, h3, h4, h5, h6, a {
+        font-family: $fontFamily;
+        font-size: $fontSize;
+    }
+}

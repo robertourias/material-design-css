@@ -1,0 +1,43 @@
+%field {
+    width: 100%;
+    height: 34px;
+    padding: 0 20px;
+    border: 0;
+    margin: 0 0 20px;
+    background: #efeff0;
+    line-height: 34px;
+    font-size: 14px;
+    font-family: $fontFamily;
+    color: #afb1b4; 
+
+    &:focus {
+        outline: none;    
+    }
+}
+
+.fieldset {
+    background: #fff;
+    padding: 18px 22px;
+    margin: 0 0 45px;
+
+    .line {
+        label {            
+            display: inline-block;
+            width: 100%;
+            margin: 0 0 4px;            
+            font-family: $fontFamily;
+            color: #afb1b4; 
+        }
+
+        input {            
+            @extend %field;            
+        }
+
+        textarea {
+            @extend %field;
+            height: 100px;
+            line-height: 1.5;
+            padding: 10px 20px;
+        }
+    }
+}
